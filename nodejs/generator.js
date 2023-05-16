@@ -12,6 +12,9 @@ import { getSpeakersBox } from "./components/speaker-box.js";
 import { getSpeaker } from "./components/speaker.js";
 import { getFooter } from "./components/footer.js";
 import { getSpacer } from './components/spacer.js';
+import { getImage } from './components/image.js';
+import { getSpeakerThesis } from "./components/speaker-thesis.js";
+import { getSpeakerNoTheme } from "./components/speaker-no-theme.js";
 
 export const genHTML = (data) => {
   let body = getBody();
@@ -61,17 +64,47 @@ export const genHTML = (data) => {
           content += getSpeakersBox();
           let speakers = "";
           item.speakers.forEach((speaker) => {
-            speakers += getSpeaker(
-              speaker.img,
-              speaker.fioAndJob,
-              speaker.theme
-            );
+            switch(speaker.type) {
+              case "SPEAKER" : {
+                speakers += getSpeaker(
+                  speaker.img,
+                  speaker.fioAndJob,
+                  speaker.theme
+                );
+                break;
+              }
+              case "SPEAKERTHESIS" : {
+                speakers += getSpeakerThesis(
+                  speaker.img,
+                  speaker.fioAndJob,
+                  speaker.theme,
+                  speaker.thesis
+                );
+                break;
+              }
+              case "SPEAKERNOTHEME" : {
+                speakers += getSpeakerNoTheme(
+                  speaker.img,
+                  speaker.fioAndJob,
+                );
+                break;
+              }
+              case "TEXT": {
+                speakers += getPlainText(speaker.text);
+                break;
+              }
+            }
           });
+          
           content = content.replace("<!-- SPEAKERS -->", speakers);
           break;
         }
         case "SPACER": {
           content+= getSpacer();
+          break;
+        }
+        case "IMAGE": {
+          content += getImage(item.source, item.maxWidth, item.height);
           break;
         }
         case "FOOTER": {

@@ -4,20 +4,20 @@ export const data = {
     showLink: false,
     link: "https://google.com",
   },
-  utm: "",
+  utm: "day_msk_18_05",
   cover: {
-    source: "https://i.ibb.co/dmBKTHq/photo-2023-04-19-12-24-05.jpg",
+    source: "https://i.ibb.co/0ZPnZjB/0a193b59-017a-4718-a55a-7f35e6c0894a.png",
     // та же ссылка, что и в кнопке зарегистрироваться
-    link: "https://docs.google.com/forms/d/e/1FAIpQLSf-mAfjsNMcqWhMKiJxrgFV17AHnWOAlIVbQy7uwamy0sfoUw/viewform",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSexv6eIg4DdfZs-hqfBl8b4s2BsKmwSadAWshM8O_oe8TrqkA/viewform",
   },
   content: [
     {
       type: "HEADER_LG",
-      text: "Друзья, добрый день",
+      text: "Друзья, добрый день!",
     },
     {
       type: "TEXT",
-      text: "18 мая в Самаре мы проведем первый Зарплата.DAY в этом году! Вас ждут выступления экспертов, фасилитационная сессия, нетворкинг, неформальное общение с коллегами",
+      text: "08 июня в Москве мы проведем первый Зарплата.DAY в этом году! Вас ждут выступления экспертов, фасилитационная сессия, нетворкинг, неформальное общение с коллегами",
     },
     {
       type: "HEADER_BASE",
@@ -28,50 +28,56 @@ export const data = {
       speakers: [
         {
           type: "SPEAKER",
-          img: "https://i.ibb.co/BzNnY9Q/Mask-group.png",
-          fioAndJob: "<b>Артем Хусаинов</b>, Руководитель группы продаж Зарплаты.ру",
-          theme: "<b>Тема:</b> Секреты умного поиска Зарплаты.ру",
+          img: "https://i.ibb.co/RbNWj8q/1.png",
+          fioAndJob: "<b>Владимир Чернов</b>, Руководитель группы продаж Зарплаты.ру",
+          theme: "<b>Тема:</b> Работа с сервисом Зарплата.ру: лайфхаки для работодателя",
         },
         {
           type: "SPEAKER",
-          img: "https://i.ibb.co/8M9HQfd/Mask-group-3.png",
-          fioAndJob: "<b>Елена Лабута</b>, Специалист по подбору и адаптации персонала, ГК «Строммашина»",
-          theme: "<b>Тема:</b> Каналы поиска рабочего персонала в регионе. Проблемы, сложности и решения",
+          img: "https://i.ibb.co/BTzcnbS/4.png",
+          fioAndJob: "<b>Екатерина Недельчо</b>, Руководитель единого центра по подбору персонала,  АШАН Ритейл Россия",
+          theme: "<b>Тема:</b> Тренды рынка труда с начала 2023 года и способы преодолевать барьеры",
         },
         {
           type: "SPEAKER",
-          img: "https://i.ibb.co/2WNZSMw/Mask-group-2.png",
-          fioAndJob: "<b>Елена Шкитина</b>, Начальник отдела кадров, «ЭкоСтройРесурс»",
-          theme: "<b>Тема:</b> Адаптация персонала через систему наставничества в организации",
+          img: "https://i.ibb.co/hgcxnZj/3.png",
+          fioAndJob: "<b>Юлия Стрельцова</b>, Директор проектов, СберОбразование",
+          theme: "<b>Тема:</b> Трансформация профиля компетенций HR-специалиста",
         },
         {
           type: "SPEAKER",
-          img: "https://i.ibb.co/0rpCNqd/Mask-group-1.png",
-          fioAndJob: "<b>Лев Ушаков,</b> Бизнес-тренер, mini-MBA «Фасилитация, модерация, стратегические коммуникации», преподаватель двух программ повышения квалификации",
-          theme: "<b>Тема:</b> Фасилитационная сессия: решение HR-задач в поиске, подборе и адаптации персонала",
+          img: "https://i.ibb.co/kXf2X3b/2.png",
+          fioAndJob: "<b>Анна Айриян</b>, Бизнес-психолог, командный коуч, фасилитатор, автор и ведущая передачи про бизнес на канале “Медиаметрикс”",
+          theme: "<b>Тема:</b> Фасилитационная сессия: решение HR-задач по поиску, подбору и адаптации персонала",
         },
       ]
     },
     {
       type: "BUTTON",
       text: "Скачать программу",
-      linkTo: "https://drive.google.com/file/d/18_70glJjxY-8OUXXPF03ddC6u7SoeG4P/view?usp=share_link",
+      linkTo: "https://drive.google.com/file/d/1ijT69XQtzqrwNgZjZJQo4WGX1q-C3EDg/view?usp=share_link",
+    },
+    {
+      type: "IMAGE",
+      maxWidth: "100px",
+      height: "100px",
+      source: "https://i.ibb.co/VtrRps7/image.png",
     },
     {
       type: "TEXT",
-      text: "Обсудим, как работать в соцсетях и мессенджерах для поиска кандидатов, какая реклама рабочих вакансий наиболее эффективна. Разберем вместе запуск системы наставничества, чтобы сократить текучесть персонала. По итогам встречи каждый участник сформирует портфель актуальных на 2023 год решений по рекрутингу, найму и адаптации персонала.",
+      text: "Познакомитесь с удобными инструментами поиска сотрудников, обновите свой портфель навыков кризис-менеджмента в работе с персоналом. По итогам встречи сформируете личный перечень решений по рекрутингу, найму и адаптации кадров на на 2023 год.",
     },
     {
       type: "BUTTON",
       text: "Зарегистрироваться",
-      linkTo: "https://docs.google.com/forms/d/e/1FAIpQLSf-mAfjsNMcqWhMKiJxrgFV17AHnWOAlIVbQy7uwamy0sfoUw/viewform",
+      linkTo: "https://docs.google.com/forms/d/e/1FAIpQLSexv6eIg4DdfZs-hqfBl8b4s2BsKmwSadAWshM8O_oe8TrqkA/viewform",
     },
     {
       type: "TEXT_BOLD",
-      text: "Будем рады видеть вас 18 мая в 09:30, Московское шоссе 4, к4, конференц-зал, 2 этаж (IT-парк Monte Rosa)",
+      text: "Будем рады видеть вас 08 июня в 09:30, г. Москва, Маросейка 7/8,  Fotofaktura",
     },
-    {
-      type: "FOOTER",
-    },
+    // {
+    //   type: "FOOTER",
+    // },
   ],
 };

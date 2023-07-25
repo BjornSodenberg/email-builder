@@ -13,7 +13,7 @@ export const data = {
   content: [
     {
       type: "HEADER_LG",
-      text: "Друзья, добрый день!",
+      text: "Друзья, добрый день!!",
     },
     {
       type: "TEXT",

@@ -15,6 +15,7 @@ import { getSpacer } from './components/spacer.js';
 import { getImage } from './components/image.js';
 import { getSpeakerThesis } from "./components/speaker-thesis.js";
 import { getSpeakerNoTheme } from "./components/speaker-no-theme.js";
+import { getThemeText } from './components/theme-text.js';
 
 export const genHTML = (data) => {
   let body = getBody();
@@ -89,8 +90,8 @@ export const genHTML = (data) => {
                 );
                 break;
               }
-              case "TEXT": {
-                speakers += getPlainText(speaker.text);
+              case "THEMETEXT": {
+                speakers += getThemeText(speaker.text);
                 break;
               }
             }

@@ -16,6 +16,7 @@ import { getImage } from './components/image.js';
 import { getSpeakerThesis } from "./components/speaker-thesis.js";
 import { getSpeakerNoTheme } from "./components/speaker-no-theme.js";
 import { getThemeText } from './components/theme-text.js';
+import { getTableBox } from "./components/table.js";
 
 export const genHTML = (data) => {
   let body = getBody();
@@ -59,6 +60,10 @@ export const genHTML = (data) => {
         }
         case "TEXT_BOLD": {
           content += getBoldText(item.text);
+          break;
+        }
+        case "TABLE": {
+          content += getTableBox(item.curr, item.new);
           break;
         }
         case "SPEAKERS": {

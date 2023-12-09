@@ -11,12 +11,13 @@ import { getPreheader } from "./components/preheader.js";
 import { getSpeakersBox } from "./components/speaker-box.js";
 import { getSpeaker } from "./components/speaker.js";
 import { getFooter } from "./components/footer.js";
-import { getSpacer } from './components/spacer.js';
-import { getImage } from './components/image.js';
+import { getSpacer } from "./components/spacer.js";
+import { getImage } from "./components/image.js";
 import { getSpeakerThesis } from "./components/speaker-thesis.js";
 import { getSpeakerNoTheme } from "./components/speaker-no-theme.js";
-import { getThemeText } from './components/theme-text.js';
+import { getThemeText } from "./components/theme-text.js";
 import { getTableBox } from "./components/table.js";
+import { getFooter2 } from "./components/footer2.js";
 
 export const genHTML = (data) => {
   let body = getBody();
@@ -70,8 +71,8 @@ export const genHTML = (data) => {
           content += getSpeakersBox();
           let speakers = "";
           item.speakers.forEach((speaker) => {
-            switch(speaker.type) {
-              case "SPEAKER" : {
+            switch (speaker.type) {
+              case "SPEAKER": {
                 speakers += getSpeaker(
                   speaker.img,
                   speaker.fioAndJob,
@@ -79,7 +80,7 @@ export const genHTML = (data) => {
                 );
                 break;
               }
-              case "SPEAKERTHESIS" : {
+              case "SPEAKERTHESIS": {
                 speakers += getSpeakerThesis(
                   speaker.img,
                   speaker.fioAndJob,
@@ -88,11 +89,8 @@ export const genHTML = (data) => {
                 );
                 break;
               }
-              case "SPEAKERNOTHEME" : {
-                speakers += getSpeakerNoTheme(
-                  speaker.img,
-                  speaker.fioAndJob,
-                );
+              case "SPEAKERNOTHEME": {
+                speakers += getSpeakerNoTheme(speaker.img, speaker.fioAndJob);
                 break;
               }
               case "THEMETEXT": {
@@ -101,12 +99,12 @@ export const genHTML = (data) => {
               }
             }
           });
-          
+
           content = content.replace("<!-- SPEAKERS -->", speakers);
           break;
         }
         case "SPACER": {
-          content+= getSpacer();
+          content += getSpacer();
           break;
         }
         case "IMAGE": {
@@ -126,5 +124,9 @@ export const genHTML = (data) => {
     body = body.replace("<!-- CONTENT -->", content);
   }
 
+  if (data.emailFooter) {
+    body = body.replace("<!-- EMAIL FOOTER -->", getFooter2());
+  }
+
   return body;
-}
+};

@@ -1,28 +1,53 @@
 export const data = {
-  preheader: "Трендовые инструменты подбора и оценки новых сотрудников",
   title: {
     showLink: false,
     link: "https://google.com",
   },
-  utm: "day_msk_18_05",
-  cover: {
-    source: "https://i.ibb.co/0ZPnZjB/0a193b59-017a-4718-a55a-7f35e6c0894a.png",
-    // та же ссылка, что и в кнопке зарегистрироваться
-    link: "https://docs.google.com/forms/d/e/1FAIpQLSexv6eIg4DdfZs-hqfBl8b4s2BsKmwSadAWshM8O_oe8TrqkA/viewform",
-  },
+  utm: "",
   content: [
     {
-      type: "HEADER_LG",
-      text: "Друзья, добрый день!",
+      type: "TEXT",
+      text: "Коллеги, добрый день!",
     },
     {
       type: "TEXT",
-      text: "08 июня в Москве мы проведем первый Зарплата.DAY в этом году! Вас ждут выступления экспертов, фасилитационная сессия, нетворкинг, неформальное общение с коллегами",
+      text: "<b>15 января 2024 года на вакансии «Бизнес»</b> изменится стоимость размещения в Барнауле и Алтайском крае:",
     },
     {
       type: "TABLE",
-      curr: "1 000 ₽",
-      new: "1 200 ₽"
+      curr: "1 900 ₽",
+      new: "2 100 ₽"
+    },
+    {
+      type: "TEXT",
+      text: "Изменения также коснутся вакансий «Промо» и пакетных предложений.\nСтоимость доступа к базе резюме и опций продвижения останется прежней.",
+    },
+    {
+      type: "TEXT",
+      text: "Успейте приобрести доступы по текущим ценам!",
+    },
+    {
+      type: "BUTTON",
+      text: "Купить по старой цене",
+      linkTo: "https://novosibirsk.hr.zarplata.ru/price/zp-publications"
+    },
+    {
+      type: "TEXT",
+      text: `Если у вас есть вопросы, напишите менеджеру или позвоните нам по номеру 
+      <a
+      href="tel:88002343500"
+      style="
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        mso-line-height-rule: exactly;
+        font-family: arial, 'helvetica neue', helvetica, sans-serif;
+        font-size: 15px;
+        text-decoration: none;
+        color: #0076cb;
+      "
+      >8 (800) 234-35-00</a
+    >`
     }
   ],
+  emailFooter: false,
 };
